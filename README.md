@@ -15,12 +15,40 @@ npm install --save mf-react-paginator
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'mf-react-paginator'
+import Pagination from 'mf-react-paginator'
 
 class Example extends Component {
+  toPage(num) {
+    console.log(num);
+  }
+
   render () {
+    const options = {
+      perPage: 10,
+      current: 1,
+      prev: false,
+      next: true,
+      last: 10,
+      total: 100,
+    };
+
     return (
-      <MyComponent />
+      <div>
+        <Pagination 
+          options={options}                   // Required
+          onClick={this.toPage.bind(this)}    // Required
+          pageRangeDisplayed={3}              // Optional
+          prevPageText={'Anterior'}           // Optional
+          firstPageText={'Primera página'}    // Optional
+          nextPageText={'Siguiente'}          // Optional
+          lastPageText={'Última página'}      // Optional
+          innerClass={undefined}              // Optional
+          itemClass={undefined}               // Optional
+          linkClass={undefined}               // Optional
+          activeClass={'active'}              // Optional
+          disabledClass={'disabled'}          // Optional
+        />
+      </div>
     )
   }
 }
@@ -28,4 +56,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [moisesgonzalez1](https://github.com/moisesgonzalez1)
+MIT © [moisesgonzalez1](https://github.com/mgonzalez1)
