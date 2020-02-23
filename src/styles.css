@@ -1,8 +1,23 @@
 /* add css styles here (optional) */
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+.nav_pagination {
+    display: inline-block;
+}
+
+.nav_pagination > ul {
+    list-style: none;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_pagination > ul > li {
+    padding: 0 5px;
+}
+
+.nav_pagination > ul > li > a {
+    text-decoration: none;
+    color: inherit;
 }
