@@ -18,8 +18,8 @@ import React, { Component } from 'react'
 import Pagination from 'mf-react-paginator'
 
 class Example extends Component {
-  toPage(num) {
-    console.log(num);
+  toPage(page) {
+    console.log(page);
   }
 
   render () {
